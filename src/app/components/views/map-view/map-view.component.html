@@ -1,0 +1,14 @@
+
+<section>
+
+    <ko-stage  #stage [config]="configStage">
+        <ko-layer #layer>
+            <ko-image [config]="configImage"></ko-image>
+            <ko-image class="blink-image" (click)="handleClickImage()" [config]="marker"></ko-image>
+            <!--<ko-image *ngFor="let item of newArray"
+                      [config]="item">
+
+            </ko-image>-->
+        </ko-layer>
+    </ko-stage>
+</section>

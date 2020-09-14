@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="page">
+        <div class="column1" >
+          <div *ngFor="let image of images; let count = index;" >
+            <div class="row">
+              <img [src]="image" (click)="clickImage(image)" width="100px" height="100px" alt="Snow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-8">
+      <img [src]="selectedImage" alt="Snow" style="width:100%">
+    </div>
+  </div>
+</div>
+
+
+
+

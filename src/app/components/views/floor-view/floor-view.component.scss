@@ -1,0 +1,56 @@
+
+.sidenav {
+    height: 100vh;
+    width: 200px;
+    padding: 0.3125em;
+    float:left;
+    overflow: auto;
+    border-right: 0.0625em solid lightgray;
+}
+.sidenav > div {
+    padding: 0.125em;
+    margin: 0.3125em 0em 0.4375em 0em;
+    box-shadow: 0em 0em  0.3125em rgba(0, 0, 0, 55%);
+}
+.main-container {
+    width: calc(100% - 15em);
+    float: right;
+    height: 100vh;
+    padding: 1em;
+}
+img {
+    width:100%;
+}
+.main-container img{
+    height: 100%;
+}
+.active-image {
+    border:0.142em solid red;
+}
+
+.sidenav-section{
+    width:100%;
+}
+
+.sidenav a {
+    padding: 0.375em 0.5em 0.375em 1em;
+    text-decoration: none;
+    font-size: 1.5625em;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160em; /* Same as the width of the sidenav */
+    font-size: 28em; /* Increased text to enable scrolling */
+    padding: 0em 10em;
+}
+
+@media screen and (max-height: 28.125em) {
+    .sidenav {padding-top: 0.9375em;}
+    .sidenav a {font-size: 1.125em;}
+}

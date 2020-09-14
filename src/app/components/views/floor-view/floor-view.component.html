@@ -1,0 +1,26 @@
+
+<ng-container >
+    <div class="sidenav">
+        <div *ngFor="let floorMap of floorMaps; let count = index;"  [ngClass]="{'active-image': selectedImage1 === count}">
+            <img [src]="floorMap.srcPath" (click)="onFloorSelected(floorMap, count)"  alt="Snow">
+        </div>
+    </div>
+    <div class="main-container">
+        <section class="sidenav-section">
+            <ng-container>
+                <ko-stage  #stage [config]="configStage">
+                    <ko-layer #layer>
+                        <ko-image [config]="configImage"></ko-image>
+                    </ko-layer>
+                    <ko-layer #assetLayer>
+                        <ko-image *ngFor="let asset of currentFloorAssets"
+                                  [config]="asset"> </ko-image>
+                    </ko-layer>
+                </ko-stage>
+            </ng-container>
+        </section>
+    </div>
+</ng-container>
+
+
+

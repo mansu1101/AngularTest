@@ -1,0 +1,16 @@
+.idea
+.vscode
+
+dist
+src/**/*.d.ts
+src/**/*.js.map
+src/**/*.css.map
+
+test_runner/report
+
+node_modules/
+
+tenant
+./build
+/temp/
+report

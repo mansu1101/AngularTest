@@ -1,0 +1,50 @@
+
+.sidenav {
+  height: 100vh;
+  width: 200px;
+  padding: 5px;
+  float:left;
+  overflow: auto;
+  border-right: 1px solid lightgray;
+}
+.sidenav > div {
+  padding: 2px;
+  margin: 5px 0px 7px 0px;
+  box-shadow: 0px 0px 5px rgb(0 0 0 / 55%);
+}
+.main-container {
+  width: calc(100% - 200px);
+  float: right;
+  height: 100vh;
+  padding: 10px;
+}
+img {
+  width:100%;
+
+}
+
+.activeImage {
+  border:2px solid red;
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

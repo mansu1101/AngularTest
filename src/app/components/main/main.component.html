@@ -1,0 +1,15 @@
+<br>
+<section>
+  <ko-stage #stage [config]="configStage">
+    <ko-layer #layer>
+      <ko-image [config]="configImage"
+      ></ko-image>
+      <ko-image *ngFor="let item of list"
+                [config]="item">
+      </ko-image>
+
+    </ko-layer>
+    <ko-layer #dragLayer></ko-layer>
+  </ko-stage>
+  <br>
+</section>

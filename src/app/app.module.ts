@@ -1,13 +1,25 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
+import { NgModule } from '@angular/core';
+import {KonvaModule} from 'ng2-konva';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-
+import { NgImageSliderModule } from 'ng-image-slider';
+import {ViewsModule} from './components/views/views.module';
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    KonvaModule,
+    NgImageSliderModule,
+    ViewsModule
+  ],
+  exports: [
+    KonvaModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
